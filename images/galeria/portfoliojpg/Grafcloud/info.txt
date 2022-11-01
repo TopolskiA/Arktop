@@ -1,0 +1,40 @@
+Grafcloud
+Logo, wizytówki, teczka, papier firmowy
+Pakiet tworzony dla forum zajmującego się grafiką. Z sprzedażą i przechowywaniem jej w sieci
+Logo z wariantem monochromatycznym
+Wizytówki Dwustronne
+Papier firmowy
+Teczka
+Miejsce w sieci: 
+https://grafcloud.pl
+
+
+
+
+
+
+
+
+
+
+
+
+/*20 "Miejsce w sieci"*/
+/*21 LINK */
+/*30 Do sprzedania / Sprzedane*/
+/*31 nagłówek*//*32 opis*/
+
+
+
+
+Do sprzedania
+Projekt do sprzedaży - 500zł
+Skontaktuj się jeśli chcesz zakupić projekt, Nazwę zmienię na Twoją wybraną.
+/*logo Logo
+card Wizytówki
+biuro Pakiet biurowy
+plakat Plakaty
+baner Banery
+inne Inne grafiki*/
+
+logo card biuro
