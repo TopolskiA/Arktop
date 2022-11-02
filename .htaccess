@@ -1,0 +1,51 @@
+
+<IfModule mod_expires.c>
+	ExpiresActive Off
+</IfModule>
+<IfModule mod_headers.c>
+	FileETag None
+	Header unset ETag
+	Header unset Pragma
+	Header unset Cache-Control
+	Header unset Last-Modified
+	Header set Pragma "no-cache"
+	Header set Cache-Control "max-age=0, no-cache, no-store, must-revalidate"
+	Header set Expires "Thu, 1 Jan 1970 00:00:00 GMT"
+	Header set Connection keep-alive
+</IfModule>
+
+#Rewrite everything to https
+Options FollowSymLinks
+RewriteEngine On
+RewriteCond %{HTTPS} !=on [NC]
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^galeria-photo$ index.php?p=galeria-photo
+RewriteRule ^galeria-graphic$ index.php?p=galeria-graphic
+RewriteRule ^galeria-iv$ index.php?p=galeria-iv
+RewriteRule ^services$ index.php?p=services
+RewriteRule ^contact$ index.php?p=contact
+RewriteRule ^about$ index.php?p=about
+RewriteRule ^certificate$ index.php?p=certificate
+RewriteRule ^portfolio$ index.php?p=portfolio
+RewriteRule ^ps-(.*)$ index.php?p=portfolio-single&proj=$1
+
+
+
+# RewriteRule ^(.*)$ index.php?p=$1
+
+
+
+
+# Apache config
+<FilesMatch ".(eot|ttf|otf|woff)">
+ Header set Access-Control-Allow-Origin "*"
+</FilesMatch>
+
+AddType text/css .css
+<Files *.php>
+    ForceType application/x-httpd-php73
+</Files>
